@@ -12,6 +12,7 @@
     
     *{
       font-family: arial,sans-serif;
+      font-size: 13px;
     }
     .header{
       font-size: 13px;
@@ -72,7 +73,7 @@
       display: block;
       margin: auto;
       margin-top: 150px;
-      width: 400px;
+      width: 300px;
       height: auto;
     }
 
@@ -85,14 +86,14 @@
     #search-bar{
       position: relative;
       left: 45px;
-      top: 7px;
+      top: 17px;
       background-image: url(./magnifying-glass.jpg);
-      background-position: 0 2px;
+      background-position: 4px 7px;
       background-repeat: no-repeat;
       background-size: 30px;
-      padding-left: 30px;
-      width: 400px;
-      height: 30px;
+      padding-left: 38px;
+      width: 530px;
+      height: 44px;
       z-index: 1;
       margin: auto;
       border: 1px solid #dfe1e5;
@@ -100,7 +101,7 @@
       -webkit-tap-highlight-color: transparent;
       
     }
-    #searchbar:hover{
+    #search-bar:hover{
       box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
       border-color: rgba(223, 225, 229, 0);
     }
@@ -113,9 +114,9 @@
     }
     #mic{
       position: relative;
-      transform: scale(.37);
-      right: 12px;
-      bottom: 10px;
+      transform: scale(.42);
+      right: 20px;
+      top: 6px;
       opacity: .9;
       z-index: 2;
     }
@@ -126,7 +127,7 @@
       display: flex;
       justify-content: center;
       position: relative;
-      bottom: 18px;
+      top: 6px;
     }
     .button{
     background-color: #f2f2f2;
@@ -165,10 +166,10 @@
   </ul>
   <br>
 
-  <a href="https://google.com/"><img id="logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"></a>
+  <a href="https://google.com/"><img id="logo" src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"></a>
   <div id="outer" class="bar">
     <form>
-      <input id="search-bar" type="text" placeholder="Search Google or type a URL">
+      <input id="search-bar" type="text" <!--placeholder="Search Google or type a URL"--!>>
     </form>
     <img id="mic" src="./mic.jpg">
   </div>
