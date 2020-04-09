@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MySearch</title>
+</head>
+
+<body>
+
+  <style>
+     html, body{
+      font-family: arial,sans-serif;
+      font-size: 13px;
+      margin:10px 0 0 0;padding:0;height:100%;
+    }
+    .container{
+      height: 100%;
+      display: grid;
+      background-color: white;
+      grid-template-columns: 14% 58% 28%;
+      grid-template-rows: 75px 30px 1fr 80px;
+      grid-template-areas: 
+        "header-icon-left search-bar header-icon-right"
+        "endheaderleft search-options endheaderright"
+        ". search-results ."
+        "footer-left footer-text footer-right";
+    }
+
+    #logo{
+      grid-area: header-icon-left;
+      margin: 8px;
+      transform: scale(.8);
+    }
+
+    #search-bar{
+      grid-area: search-bar;
+      background-image: url(./search-icons.jpg);
+      background-position: 590px 10px;
+      background-repeat: no-repeat;
+      background-size: 100px;
+      padding-left: 38px;
+      width: 670px;
+      height: 44px;
+      z-index: 1;
+      margin: auto;
+      border: 1px solid #dfe1e5;
+      border-radius: 24px;
+      font-size: 14px;
+      color: black;
+      -webkit-tap-highlight-color: transparent;
+      
+    }
+    #search-bar:hover{
+      box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+      border-color: rgba(223, 225, 229, 0);
+    }
+    #search-bar:focus{
+      outline: none;
+    }
+    .headerright{
+      grid-area: header-icon-right;
+      justify-self: end;
+      align-self: start;
+    }
+    #imageA{
+      border-radius: 50%;
+      padding: 0;
+      transform: scale(0.45);
+    }
+    #apps{
+      position: relative;
+      left: 10px;
+      bottom: 5px;
+      opacity: 0.75;
+      transform: scale(.5);
+    }
+    #apps:hover{
+      opacity: 1;
+    }
+
+    .search-options{
+      justify-self: stretch;
+      
+      grid-area: search-options;
+      display: inline-block;
+      border-bottom: 1px solid rgba(97, 97, 97, 0.384);
+    }
+    .search{
+      display: inline;
+      padding-left: 27px;
+      color: rgb(95, 99, 104);
+    }
+    #all{
+      padding-left: 0;
+    }
+    #settings{
+      padding-left: 200px;
+    }
+    #endheaderleft{
+      grid-area: endheaderleft;
+    }
+    #endheaderright{
+      grid-area: endheaderright;
+    }
+    .endheader{
+      border-bottom: 1px solid rgba(97, 97, 97, 0.384);
+    }
+
+    .main-area{
+      color: rgb(95, 99, 104);
+      grid-area: search-results;
+    }
+
+    h2{
+      font-size: 20px;
+      color: #1a0dab;
+      font-weight: normal;
+    }
+    h3{
+      color:rgb(34, 34, 34);
+      display:block;
+      font-family:Roboto, arial, sans-serif;
+      font-size:20px;
+      font-weight:400;
+      height:26px;
+      line-height:26px;
+    }
+    .related-content1{
+      display: inline-block;
+      width: 210px;
+      margin: 0;
+    }
+    .related-content2{
+      display: inline-block;
+      margin: 0;
+    }
+    h5{
+      color:rgb(26, 13, 171);
+      cursor:pointer;
+      font-family:Roboto, arial, sans-serif;
+      font-size:14px;
+      text-align:justify;
+      margin: 0 5px 5px 0;
+    }
+
+    #google-stretch{
+      transform: scale(.5);
+      margin: 0;
+    }
+
+    .footer{
+      background-color:rgb(242, 242, 242);
+      border-top-color:rgb(228, 228, 228);
+      border-top-style:solid;
+      border-top-width:1px;
+    }
+    #footer-left{
+      grid-area: footer-left;
+    }
+    #footer-text{
+      grid-area: footer-text;
+      color:rgb(34, 34, 34);
+      display:block;
+      font-family:Roboto, arial, sans-serif;
+      font-size:14px;
+    }
+    #footer-right{
+      grid-area: footer-right
+    }
+
+  </style>
+
+  <div class="container">
+
+    <img id="logo" src="https://www.google.com/logos/doodles/2020/thank-you-emergency-services-workers-6753651837108755-s.png">
+
+    <form>
+      <input id="search-bar" type="text" placeholder="build this webpage">
+    </form>
+
+    <div class="headerright">
+      <a href="https://gsuite.google.com/"><img id="apps" src="./nine-dots.jpg"></a>
+      <a href="https://accounts.google.com/"><img id="imageA" src="./image_a.png"></a>
+    </div>
+
+    <div class="search-options">
+      <div class="search" id="all">All</div>
+      <div class="search">News</div>
+      <div class="search">Maps</div>
+      <div class="search">Videos</div>
+      <div class="search">Shopping</div>
+      <div class="search">More</div>
+      <div class="search" id="settings">Settings</div>
+      <div class="search">Tools</div>      
+    </div>
+    <div class="endheader" id="endheaderleft"></div>
+    <div class="endheader" id="endheaderright"></div>
+
+    <div class="main-area">
+      <p> About 126,000,000 results. </p>
+      <br>
+      <p>victor-lf.github.io › google-search-results</p>
+      <h2>build this webpage - GitHub Pages</h2>
+      <p>build this webpage. https://benjdelt.github.io/google-results/. With zero coding experience, artist building 180 webpages in 180 days ...</p>
+      <br>
+      <p>christine-27.github.io › google-homepage</p>
+      <h2>build this webpage - GitHub Pages</h2>
+      <p>TO CREATE A WEBSITE WITH WORDPRESS (OR JOOMLA & DRUPAL), USE ONE CLICK INSTALLATION: 1. Log in to your hosting account. 2. Go to your ...</p>
+      <br>
+      <p>arstechnica.com › information-technology › 2013/07 › with-zero-cod...     </p>
+      <h2>With zero coding experience, artist building 180 webpages in ...</h2>
+      <p>Jul 26, 2013 - One of Jennifer Dewalt's creations, this webpage lets visitors create paintings in ... Build a different website every day for 180 consecutive days.</p>
+      <br>
+      <p>www.websitebuilderexpert.com › building-websites   </p>
+      <h2>How to Build a Website: the Step-by-Step Guide to Easy Setup ...</h2>
+      <p>Mar 18, 2020 - Not sure how to build a website? It actually is not that hard. You don't have to be technical at all. With our handy guide, you can get started ...</p>
+      <br>
+      <p>www.squarespace.com</p>
+      <h2>Squarespace: Build a Website – Website Builder</h2>
+      <p>Squarespace is the all-in-one solution for anyone looking to create a beautiful website. Domains, eCommerce, hosting, galleries, analytics, and 24/7 support all ...
+        ‎Overview · ‎Ecommerce Templates · ‎Sell Products · ‎Sell Services</p>
+      <br>
+      <p>websitesetup.org</p>
+      <h2>How to Create a Website: Step-by-Step Guide for Beginners ...</h2>
+      <p>Learn how to make a website and set it up. This site contains different tutorials on how to build a website using WordPress, Joomla, Drupal & HTML.</p>
+      <br>
+      <h3>Searches related to build this webpage</h3>
+      <div class="related-content1">
+        <h5>best way to create a website</h5>
+        <h5>how to create a website pdf</h5>
+        <h5>website design</h5>
+        <h5>website builder expert</h5>
+      </div>
+      <div class="related-content2">
+        <h5>website templates</h5>
+        <h5>creating a website for your business</h5>
+        <h5>website demo</h5>
+        <h5>website login</h5>
+      </div>
+      
+      <img id="google-stretch" src="./long-google.jpg"> 
+
+  </div>
+
+  <div class="footer" id="footer-left"></div>
+  <div class="footer" id="footer-text">
+    <p><strong>92104, San Diego, CA</strong> - From your places (Home) - Use precise location - Learn more</p>
+    <p>Help &emsp; Send &emsp; feedback &emsp; Privacy &emsp; Terms</p>
+  </div>
+  <div class="footer" id="footer-right"></div>
+
+</body>
+
+</html>
