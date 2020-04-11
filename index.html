@@ -1,207 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>MyGoogle</title>
+  <title>MyGoogle</title>
+  <link rel="stylesheet" href="main.css">
 </head>
 
-
 <body>
-
-  <style>
-    
-    *{
-      font-family: arial,sans-serif;
-      margin: 0;
-      font-size: 13px;
-    }
-    .header{
-      font-size: 13px;
-      margin-top: 24px;
-      margin-left: 18px;
-      margin-right: 10px;
-  }
-    
-
-    ul{
-      margin: 0;
-      list-style-type: none;
-      padding: 0;
-      
-    }
-
-    .headerleft{
-      display: inline-block;
-      float: left;
-      padding-right: 15px;
-      
-    }
-
-    .headerright{
-      display:inline;
-      float: right;
-      padding-left: 15px;
-    }
-
-    a{
-      text-decoration: none;
-      background-color: transparent;
-      color: rgb(53, 53, 53);
-    }
-    a:hover{
-      text-decoration: underline;
-    }
-
-    #apps{
-      position: relative;
-      width: 20px;
-      top: -3px;
-      opacity: 0.75;
-    }
-    #apps:hover{
-      opacity: 1;
-    }
-
-    #imageA{
-      position: relative;
-      top: -22px;
-      border-radius: 50%;
-      padding: 0;
-      transform: scale(0.45);
-    }
-
-    #logo{
-      display: block;
-      margin: auto;
-      margin-top: 150px;
-      width: 300px;
-      height: auto;
-    }
-
-    .bar{
-      display: flex;
-      justify-content: center;
-      
-    }
-   
-    #search-bar{
-      position: relative;
-      left: 45px;
-      top: 17px;
-      background-image: url(./magnifying-glass.jpg);
-      background-position: 4px 7px;
-      background-repeat: no-repeat;
-      background-size: 30px;
-      padding-left: 38px;
-      width: 530px;
-      height: 44px;
-      z-index: 1;
-      margin: auto;
-      border: 1px solid #dfe1e5;
-      border-radius: 24px;
-      -webkit-tap-highlight-color: transparent;
-      
-    }
-    #search-bar:hover{
-      box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
-      border-color: rgba(223, 225, 229, 0);
-    }
-    #search-bar:focus{
-      outline: none;
-    }
- 
-    #magnify{
-      transform: scale(.6);
-    }
-    #mic{
-      position: relative;
-      transform: scale(.42);
-      right: 20px;
-      top: 6px;
-      opacity: .9;
-      z-index: 2;
-    }
-    #mic:hover{
-      cursor: pointer;
-    }
-    .button-container{
-      display: flex;
-      justify-content: center;
-      position: relative;
-      top: 6px;
-    }
-    .button{
-    background-color: #f2f2f2;
-    border: 1px solid #f2f2f2;
-    border-radius: 4px;
-    color: #5F6368;
-    font-family: arial,sans-serif;
-    font-size: 14px;
-    margin: 11px 4px;
-    padding: 7px 16px 0 16px;
-    line-height: 27px;
-    height: 34px;
-    text-align: center;
-    cursor: pointer;
-    }
-    .button:hover{
-      box-shadow: 0 1px 1px rgba(0,0,0,0.1);
-      background-color: #f8f8f8;
-      border: 1px solid #c6c6c6;
-      color: #222;
-      text-decoration: none;
-    }
-
-
-
-    .footer-container{
-      display: flex;
-      position: fixed;
-      bottom: 0;
-      background-color: gray;
-      width: 100%;
-      justify-content: space-between;
-      margin: 0;
-      background: #f2f2f2;
-      line-height: 40px;
-      border-top: 1px solid #e4e4e4;
-    }
-    .footer-container-left{
-      display: flex;
-      justify-content: flex-start;
-    }
-    .footer-container-right{
-      display: flex;
-      justify-content: flex-end;
-      margin-right: 27px;
-    }
-    .footer{
-      padding-left: 27px;
-      color: rgb(95, 99, 104);
-    }
-
-
-
-
-  </style>
 
   <ul class="header">
     <li class="headerleft"><a href="https://about.google/">About</a></li>
     <li class="headerleft"><a href="https://store.google.com/">Store</a></li>
-    <a href="https://accounts.google.com/"><img id="imageA" class="headerright" src="./image_a.png"></a>
-    <a href="https://gsuite.google.com/"><img id="apps" class="headerright" src="./nine-dots.jpg"></a>
+    <li class="headerright" id="imageAli"><a href="https://accounts.google.com/"><img alt="Account Logo" id="imageA" src="./image_a.png"></a></li>
+    <li class="headerright"><a href="https://gsuite.google.com/"><img alt="Apps Logo" id="apps" src="./nine-dots.jpg"></a></li>
     <li class="headerright"><a href="https://images.google.com/">Images</a></li>
-    <li class="headerright"><a href="https://mail.google.com/">Gmail</a></li>
-    
+    <li class="headerright"><a href="https://mail.google.com/">Gmail</a></li>   
   </ul>
-  <br>
 
-  <a href="https://google.com/"><img id="logo" src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"></a>
-  <div id="outer" class="bar">
+  <br>
+  <a href="https://google.com/"><img alt="Google Logo" id="logo" src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"></a>
+  <div class="bar">
     <form>
-      <input id="search-bar" type="text" <!--placeholder="Search Google or type a URL"--!>>
+      <input id="search-bar" type="text">
     </form>
-    <img id="mic" src="./mic.jpg">
+    <img alt="" id="mic" src="./mic.jpg">
   </div>
 
   <div class="button-container">
@@ -209,8 +31,8 @@
     <div class="button" id="button2">I'm Feeling Lucky</div>
   </div>
 
-  <div class="footer-container"></a>
-    <div class="footer-container-left"></a>
+  <div class="footer-container">
+    <div class="footer-container-left">
       <div class="footer"><a href="https://ads.google.com/">Advertising</a></div>
       <div class="footer"><a href="https://business.google.com/">Business</a></div>
       <div class="footer"><a href="https://www.google.com/search/howsearchworks">How Search works</a></div>
@@ -222,12 +44,6 @@
     </div>
   </div>
   
-
-
 </body>
-
-
-
-
 
 </html>
